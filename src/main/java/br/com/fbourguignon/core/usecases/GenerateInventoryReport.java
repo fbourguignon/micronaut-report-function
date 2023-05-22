@@ -26,7 +26,7 @@ public class GenerateInventoryReport {
         this.reportGenerator = reportGenerator;
     }
 
-    public void sendPaymentReceiptReport(UUID tenantId, String emailTo, String emailReply) {
+    public void sendInventoryReport(UUID tenantId, String emailTo, String emailReply) {
 
        List<Product> products = repository.findAllProductsByTenantID(tenantId);
 
