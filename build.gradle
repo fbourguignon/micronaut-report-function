@@ -8,6 +8,7 @@ group = "br.com.fbourguignon"
 
 repositories {
     mavenCentral()
+    maven { url "https://jaspersoft.jfrog.io/jaspersoft/third-party-ce-artifacts/" }
 }
 
 dependencies {
@@ -20,6 +21,8 @@ dependencies {
     implementation("net.sf.jasperreports:jasperreports-fonts:6.20.0")
 
     // AWS
+    implementation("io.micronaut.aws:micronaut-function-aws")
+    implementation("io.micronaut.crac:micronaut-crac")
     implementation("io.micronaut.email:micronaut-email-amazon-ses")
     implementation("com.amazonaws:aws-lambda-java-events:3.11.0")
 
@@ -36,7 +39,6 @@ java {
     targetCompatibility = JavaVersion.toVersion("17")
 }
 
-graalvmNative.toolchainDetection = false
 micronaut {
     runtime("lambda_java")
     testRuntime("junit5")
@@ -45,16 +47,5 @@ micronaut {
         annotations("br.com.fbourguignon.*")
     }
 }
-
-
-tasks.named("dockerfileNative") {
-    baseImage = "amazonlinux:2"
-    args(
-        "-XX:MaximumHeapSizePercent=80",
-        "-Dio.netty.allocator.numDirectArenas=0",
-        "-Dio.netty.noPreferDirect=true"
-    )
-}
-
 
 
