@@ -8,7 +8,7 @@ import java.util.UUID;
 @Introspected
 public class Product implements Serializable {
     private Integer id;
-    private Integer uuid;
+    private UUID uuid;
     private String name;
     private Double price;
     private String category;
@@ -23,11 +23,11 @@ public class Product implements Serializable {
         this.id = id;
     }
 
-    public Integer getUuid() {
+    public UUID getUuid() {
         return uuid;
     }
 
-    public void setUuid(Integer uuid) {
+    public void setUuid(UUID uuid) {
         this.uuid = uuid;
     }
 

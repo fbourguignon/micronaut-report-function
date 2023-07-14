@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class GenerateInventoryReport {
-    private final String SUBJECT = "RelatÃ³rio de estoque";
-    private final String BODY = "RelatÃ³rio de produtos no estoque";
+    private final String SUBJECT = "Relatório de estoque";
+    private final String BODY = "Relatório de produtos no estoque";
     public static final String INVENTORY_REPORT = "inventory_report";
     public static final String PDF_EXTENSION = ".pdf";
 
@@ -26,13 +26,13 @@ public class GenerateInventoryReport {
         this.reportGenerator = reportGenerator;
     }
 
-    public void sendInventoryReport(UUID tenantId, String emailTo, String emailReply) {
+    public void sendInventoryReport(UUID tenantId, String emailTo) {
 
        List<Product> products = repository.findAllProductsByTenantID(tenantId);
 
         final byte[] bytes = reportGenerator.generateReport(INVENTORY_REPORT, new HashMap<>(), products);
 
-        emailSender.sendEmail(emailTo, emailReply, SUBJECT, BODY, bytes, INVENTORY_REPORT + PDF_EXTENSION);
+        emailSender.sendEmail(emailTo, SUBJECT, BODY, bytes, INVENTORY_REPORT + PDF_EXTENSION);
     }
 
 }
