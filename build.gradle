@@ -12,9 +12,20 @@ repositories {
 }
 
 dependencies {
+    annotationProcessor("io.micronaut:micronaut-http-validation")
+    annotationProcessor("org.projectlombok:lombok")
+    compileOnly("org.projectlombok:lombok")
+
+
     implementation("io.micronaut:micronaut-jackson-databind")
     implementation("io.micronaut.crac:micronaut-crac")
     implementation("jakarta.annotation:jakarta.annotation-api")
+
+    // Persistence
+    implementation("io.micronaut.data:micronaut-data-hibernate-jpa")
+    implementation("io.micronaut:micronaut-validation")
+    implementation("io.micronaut.sql:micronaut-jdbc-hikari")
+    runtimeOnly("org.postgresql:postgresql")
 
     // JASPER
     implementation("net.sf.jasperreports:jasperreports:6.20.0")
@@ -22,13 +33,15 @@ dependencies {
 
     // AWS
     implementation("io.micronaut.aws:micronaut-function-aws")
-    implementation("io.micronaut.crac:micronaut-crac")
     implementation("io.micronaut.email:micronaut-email-amazon-ses")
     implementation("com.amazonaws:aws-lambda-java-events:3.11.0")
 
     runtimeOnly("ch.qos.logback:logback-classic")
     testImplementation("io.micronaut:micronaut-http-client")
-
+    testImplementation("org.testcontainers:junit-jupiter")
+    testImplementation "org.testcontainers:localstack:1.18.3"
+    testImplementation("org.testcontainers:postgresql")
+    testImplementation("org.testcontainers:testcontainers")
 }
 
 application {
