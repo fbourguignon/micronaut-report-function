@@ -2,7 +2,7 @@ package br.com.fbourguignon;
 
 import br.com.fbourguignon.application.dto.ReportRequestDTO;
 import br.com.fbourguignon.application.exception.ProcessSQSEventException;
-import br.com.fbourguignon.application.service.RegisterReportService;
+import br.com.fbourguignon.application.service.GenerateReportService;
 import com.amazonaws.services.lambda.runtime.events.SQSEvent;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,7 +15,8 @@ public class FunctionRequestHandler extends MicronautRequestHandler<SQSEvent, Vo
     @Inject
     ObjectMapper objectMapper;
     @Inject
-    RegisterReportService reportService;
+    GenerateReportService reportService;
+    
     @Override
     public Void execute(SQSEvent event) {
         try {
