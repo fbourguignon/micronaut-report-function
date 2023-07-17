@@ -1,8 +1,8 @@
 package br.com.fbourguignon.adapters.report;
 
 
+import br.com.fbourguignon.application.exception.ReportGenerationException;
 import br.com.fbourguignon.application.exception.ReportNotFoundException;
-import br.com.fbourguignon.application.exception.ReportNotImplementedException;
 import br.com.fbourguignon.core.ports.ReportGenerator;
 import jakarta.inject.Singleton;
 import net.sf.jasperreports.engine.*;
@@ -43,10 +43,10 @@ public class ReportService implements ReportGenerator {
             return JasperExportManager.exportReportToPdf(jasperPrint);
         } catch (JRException e) {
             logger.error("An error has occurred on generate report", e);
-            throw new ReportNotImplementedException("Requested report not implented");
+            throw new ReportGenerationException("Requested report not implented");
         } catch (Exception e) {
             logger.error("Unexpected error on generate report", e);
-            throw new RuntimeException(e);
+            throw new ReportGenerationException(e.getMessage());
         }
 
     }
