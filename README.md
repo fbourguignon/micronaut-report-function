@@ -1,27 +1,18 @@
-## Micronaut 3.9.1 Documentation
+# micronaut-report-function
+Proof of concept using AWS Lambda, SQS, SES, Jasper Reports and Java
 
-- [User Guide](https://docs.micronaut.io/3.9.1/guide/index.html)
-- [API Reference](https://docs.micronaut.io/3.9.1/api/index.html)
-- [Configuration Reference](https://docs.micronaut.io/3.9.1/guide/configurationreference.html)
-- [Micronaut Guides](https://guides.micronaut.io/index.html)
----
+![picture](img/aws-diagram.png)
 
-## Handler
+- [x] [Micronaut 3.9.1](https://micronaut.io/)
+- [x] [Micronaut Data](https://micronaut-projects.github.io/micronaut-data/latest/guide/)
+- [x] [Micronaut Test Resources](https://micronaut-projects.github.io/micronaut-test-resources/latest/guide/)
+- [x] [IReport 6.20](https://sourceforge.net/projects/jasperstudio/files/JaspersoftStudio-6.20.0/)
+- [x] [Micronaut Flyway](https://micronaut-projects.github.io/micronaut-flyway/latest/guide/)
+- [x] Java 17
+- [x] Docker
+- [x] Postgres
 
-Handler: io.micronaut.function.aws.proxy.MicronautLambdaHandler
-
-[AWS Lambda Handler](https://docs.aws.amazon.com/lambda/latest/dg/java-handler.html)
-
-- [Micronaut Gradle Plugin documentation](https://micronaut-projects.github.io/micronaut-gradle-plugin/latest/)
-- [GraalVM Gradle Plugin documentation](https://graalvm.github.io/native-build-tools/latest/gradle-plugin.html)
-- [Shadow Gradle Plugin](https://plugins.gradle.org/plugin/com.github.johnrengelman.shadow)
-## Feature snapstart documentation
-
-- [https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html](https://docs.aws.amazon.com/lambda/latest/dg/snapstart.html)
-
-
-## Feature aws-lambda documentation
-
-- [Micronaut AWS Lambda Function documentation](https://micronaut-projects.github.io/micronaut-aws/latest/guide/index.html#lambda)
-
-
+### Build for JVM execution
+```console
+micronaut-report-function % make build
+```
