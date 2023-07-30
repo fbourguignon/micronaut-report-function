@@ -1,0 +1,9 @@
+email:
+  sender:
+    from: 'company@gmail.com'
+integration-tests: true
+datasources:
+  default:
+    url: jdbc:tc:postgresql:14:///postgres?TC_INITSCRIPT=db/init_postgres.sql
+    allow-pool-suspension: true
+    driver-class-name: org.testcontainers.jdbc.ContainerDatabaseDriver
