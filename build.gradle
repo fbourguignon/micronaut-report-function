@@ -42,6 +42,7 @@ dependencies {
     testImplementation "org.testcontainers:localstack:1.18.3"
     testImplementation("org.testcontainers:postgresql")
     testImplementation("org.testcontainers:testcontainers")
+    testImplementation("org.mockito:mockito-core")
 }
 
 application {
