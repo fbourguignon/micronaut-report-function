@@ -24,6 +24,3 @@ Using test resources, some containers will be created automatically during the e
 - [Localstack SES using test containers](https://github.com/fbourguignon/micronaut-report-function/blob/main/src/test/java/integration/SESLocalStackClientFactory.java#L21)
 - [PostgresSQL using test resources](https://github.com/fbourguignon/micronaut-report-function/blob/main/src/test/resources/application.yml#L7)
 
-```console
-micronaut-report-function % make build
-```

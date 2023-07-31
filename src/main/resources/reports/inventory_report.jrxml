@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.20.0.final using JasperReports Library version 6.20.0-2bc7ab61c56f459e8176eb05c7705e145cd400ad  -->
+<!-- Created with Jaspersoft Studio version 6.20.1.final using JasperReports Library version 6.20.1-7584acb244139816654f64e2fd57a00d3e31921e  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="product_report" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="1a7d1908-aad2-4b8e-a843-6f5a8bdcac31">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
 	<field name="name" class="java.lang.String"/>
-	<field name="category.name" class="java.lang.String"/>
+	<field name="category" class="java.lang.String"/>
 	<field name="description" class="java.lang.String"/>
 	<field name="price" class="java.lang.Double"/>
 	<field name="quantity" class="java.lang.Integer"/>
@@ -88,7 +88,7 @@
 					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c31b2626-8393-4657-ba60-3ccaca6ede9c"/>
 				</reportElement>
 				<textElement textAlignment="Center"/>
-				<textFieldExpression><![CDATA[$F{category.name}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{category}]]></textFieldExpression>
 			</textField>
 			<textField textAdjust="StretchHeight">
 				<reportElement x="260" y="0" width="135" height="20" uuid="7dd7cb7e-2ae8-44b0-812f-5c488127ebcd">
