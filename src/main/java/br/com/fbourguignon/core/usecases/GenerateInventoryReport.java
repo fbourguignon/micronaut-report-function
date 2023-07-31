@@ -11,8 +11,8 @@ import java.util.List;
 import java.util.UUID;
 
 public class GenerateInventoryReport {
-    private final String SUBJECT = "Relatório de estoque";
-    private final String BODY = "Relatório de produtos no estoque";
+    private final String SUBJECT = "RelatÃ³rio de estoque";
+    private final String BODY = "RelatÃ³rio de produtos no estoque";
     public static final String INVENTORY_REPORT = "inventory_report";
     public static final String PDF_EXTENSION = ".pdf";
 

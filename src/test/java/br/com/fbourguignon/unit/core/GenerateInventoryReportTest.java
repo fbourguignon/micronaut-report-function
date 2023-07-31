@@ -60,8 +60,8 @@ public class GenerateInventoryReportTest {
         verify(reportGenerator,times(1)).generateReport(eq("inventory_report"), eq(new HashMap<>()), eq(productList));
         verify(emailSender, times(1)).sendEmail(
                 eq("email@gmail.com"),
-                eq("Relatório de estoque"),
-                eq("Relatório de produtos no estoque"),
+                eq("RelatÃ³rio de estoque"),
+                eq("RelatÃ³rio de produtos no estoque"),
                 eq(reportBinaries),
                 eq("inventory_report.pdf"));
     }
